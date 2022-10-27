@@ -1,0 +1,41 @@
+[debug] [2022-10-27T09:52:44.822Z] ----------------------------------------------------------------------
+[debug] [2022-10-27T09:52:44.824Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-27T09:52:44.824Z] CLI Version:   11.15.0
+[debug] [2022-10-27T09:52:44.824Z] Platform:      win32
+[debug] [2022-10-27T09:52:44.825Z] Node Version:  v16.13.1
+[debug] [2022-10-27T09:52:44.826Z] Time:          Thu Oct 27 2022 15:52:44 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-27T09:52:44.826Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-27T09:52:44.883Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-27T09:52:44.883Z] > authorizing via signed-in user (sabikonnahar.sr@gmail.com)
+[debug] [2022-10-27T09:52:44.883Z] [iam] checking project router-firebase-assignments-10 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-27T09:52:44.885Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/router-firebase-assignments-10:testIamPermissions [none]
+[debug] [2022-10-27T09:52:44.885Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/router-firebase-assignments-10:testIamPermissions x-goog-quota-user=projects/router-firebase-assignments-10
+[debug] [2022-10-27T09:52:44.885Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/router-firebase-assignments-10:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-27T09:52:47.152Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/router-firebase-assignments-10:testIamPermissions 200
+[debug] [2022-10-27T09:52:47.152Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/router-firebase-assignments-10:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-27T09:52:47.153Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/router-firebase-assignments-10 [none]
+[debug] [2022-10-27T09:52:47.734Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/router-firebase-assignments-10 200
+[debug] [2022-10-27T09:52:47.734Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/router-firebase-assignments-10 {"projectId":"router-firebase-assignments-10","projectNumber":"1095050233448","displayName":"router-firebase-assignments-10","name":"projects/router-firebase-assignments-10","resources":{"hostingSite":"router-firebase-assignments-10"},"state":"ACTIVE","etag":"1_3dd97a7b-52d6-4c43-8915-6c8300fdffbf"}
+[info] 
+[info] === Deploying to 'router-firebase-assignments-10'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-27T09:52:47.737Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/router-firebase-assignments-10/versions [none]
+[debug] [2022-10-27T09:52:47.737Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/router-firebase-assignments-10/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-10-27T09:52:50.049Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/router-firebase-assignments-10/versions 200
+[debug] [2022-10-27T09:52:50.049Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/router-firebase-assignments-10/versions {"name":"projects/1095050233448/sites/router-firebase-assignments-10/versions/963a847f2addf484","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[router-firebase-assignments-10]: beginning deploy... 
+[info] i  hosting[router-firebase-assignments-10]: found 1 files in build 
+[debug] [2022-10-27T09:52:50.054Z] [hosting] uploading with 200 concurrency
+[debug] [2022-10-27T09:52:50.056Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2022-10-27T09:52:50.062Z] [hosting] hash cache [YnVpbGQ] stored for 1 files
+[debug] [2022-10-27T09:52:50.062Z] [hosting][hash queue][FINAL] {"max":3,"min":3,"avg":3,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":5}
+[debug] [2022-10-27T09:52:50.063Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095050233448/sites/router-firebase-assignments-10/versions/963a847f2addf484:populateFiles [none]
+[debug] [2022-10-27T09:52:50.063Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095050233448/sites/router-firebase-assignments-10/versions/963a847f2addf484:populateFiles {"files":{"/index.html":"1ffa0d14baa606b72ce4368f00fe4e8e83df1f69a0d5957a83f6997f209e57cc"}}
+[debug] [2022-10-27T09:52:51.290Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095050233448/sites/router-firebase-assignments-10/versions/963a847f2addf484:populateFiles 200
+[debug] [2022-10-27T09:52:51.290Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095050233448/sites/router-firebase-assignments-10/versions/963a847f2addf484:populateFiles {"uploadRequiredHashes":["1ffa0d14baa606b72ce4368f00fe4e8e83df1f69a0d5957a83f6997f209e57cc"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/router-firebase-assignments-10/versions/963a847f2addf484/files"}
+[debug] [2022-10-27T09:52:51.291Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/router-firebase-assignments-10/versions/963a847f2addf484/files/1ffa0d14baa606b72ce4368f00fe4e8e83df1f69a0d5957a83f6997f209e57cc [none]
+[debug] [2022-10-27T09:52:51.291Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/router-firebase-assignments-10/versions/963a847f2addf484/files/1ffa0d14baa606b72ce4368f00fe4e8e83df1f69a0d5957a83f6997f209e57cc [stream]
+[debug] [2022-10-27T09:52:51.292Z] [hosting][populate queue][FINAL] {"max":1231,"min":1231,"avg":1231,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1232}
+[debug] [2022-10-27T09:52:51.292Z] [hosting] uploads queued: 1
